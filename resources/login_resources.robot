@@ -10,6 +10,7 @@ Preencher Campos de Login
     [Arguments]    ${usuario}    ${senha}
     Input Text     id=usuario    ${usuario}
     Input Text     id=senha    ${senha}
+    Sleep    2s
 
 Submeter Login
     Click Button    id=login-button

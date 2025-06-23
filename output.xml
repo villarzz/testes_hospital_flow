@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.12.6 on win32)" generated="2025-06-23T15:07:35.033294" rpa="false" schemaversion="5">
+<suite id="s1" name="Pacientes" source="c:\Users\hugo.oliveira\Documents\projetos\testes_hospital_flow\tests\pacientes.robot">
+<test id="s1-t1" name="Buscar Paciente Pelo Nome" line="29">
+<kw name="Abrir Tela de Login" owner="login_resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-23T15:07:35.383998" level="INFO">Opening browser 'chrome' to base url 'http://localhost:4200/login'.</msg>
+<msg time="2025-06-23T15:07:35.764384" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+<arg>http://localhost:4200/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-23T15:07:35.383998" elapsed="2.722475"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-23T15:07:38.106473" elapsed="0.029657"/>
+</kw>
+<status status="PASS" start="2025-06-23T15:07:35.383998" elapsed="2.752132"/>
+</kw>
+<kw name="Preencher Campos de Login" owner="login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-23T15:07:38.139792" level="INFO">Typing text 'hugo.oliveira' into text field 'id=usuario'.</msg>
+<arg>id=usuario</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-23T15:07:38.138785" elapsed="0.099926"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-23T15:07:38.238855" level="INFO">Typing text 'hugo0305' into text field 'id=senha'.</msg>
+<arg>id=senha</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-23T15:07:38.238855" elapsed="0.064875"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-23T15:07:40.304225" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-23T15:07:38.303730" elapsed="2.000495"/>
+</kw>
+<arg>hugo.oliveira</arg>
+<arg>hugo0305</arg>
+<status status="PASS" start="2025-06-23T15:07:38.138785" elapsed="2.165440"/>
+</kw>
+<kw name="Submeter Login" owner="login_resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-23T15:07:40.304225" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-23T15:07:40.304225" elapsed="0.116785"/>
+</kw>
+<status status="PASS" start="2025-06-23T15:07:40.304225" elapsed="0.116785"/>
+</kw>
+<kw name="Verificar Login com Sucesso" owner="login_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Internações</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-23T15:07:40.421010" elapsed="0.233673"/>
+</kw>
+<status status="PASS" start="2025-06-23T15:07:40.421010" elapsed="0.233673"/>
+</kw>
+<kw name="Navegar para pacientes" owner="pacientes_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-23T15:07:40.654683" level="INFO">Clicking element 'id:pacientes'.</msg>
+<arg>id:pacientes</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-23T15:07:40.654683" elapsed="0.245860"/>
+</kw>
+<status status="PASS" start="2025-06-23T15:07:40.654683" elapsed="0.245860"/>
+</kw>
+<kw name="Preencher Dados de busca" owner="pacientes_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-23T15:07:40.900543" level="INFO">Typing text 'João' into text field 'id=nomeBusca'.</msg>
+<arg>id=nomeBusca</arg>
+<arg>${termo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-23T15:07:40.900543" elapsed="0.051746"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-23T15:07:42.952745" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-23T15:07:40.952289" elapsed="2.000456"/>
+</kw>
+<arg>João</arg>
+<status status="PASS" start="2025-06-23T15:07:40.900543" elapsed="2.052202"/>
+</kw>
+<kw name="Submeter Busca de Paciente" owner="pacientes_resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-23T15:07:42.952745" level="INFO">Clicking button 'id=buscar-paciente'.</msg>
+<arg>id=buscar-paciente</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-23T15:07:42.952745" elapsed="0.093831"/>
+</kw>
+<status status="PASS" start="2025-06-23T15:07:42.952745" elapsed="0.093831"/>
+</kw>
+<kw name="Varificar se Paciente foi buscado" owner="pacientes_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>João</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-23T15:07:43.047578" elapsed="0.011674"/>
+</kw>
+<status status="PASS" start="2025-06-23T15:07:43.046576" elapsed="0.012676"/>
+</kw>
+<kw name="Fechar Navegador" owner="login_resources">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-23T15:07:43.059252" elapsed="2.156093"/>
+</kw>
+<status status="PASS" start="2025-06-23T15:07:43.059252" elapsed="2.156093"/>
+</kw>
+<status status="PASS" start="2025-06-23T15:07:35.383998" elapsed="9.831347"/>
+</test>
+<status status="PASS" start="2025-06-23T15:07:35.035686" elapsed="10.184824"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Pacientes" id="s1" pass="1" fail="0" skip="0">Pacientes</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-23T15:07:35.764384" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+</errors>
+</robot>

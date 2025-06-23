@@ -8,17 +8,46 @@ Navegar para pacientes
 Abrir modal
     Click Button    adicionar-paciente
 
+Abrir modal edição
+    Click Button    botao-editar
+
 Preencher Dados do Paciente
-    [Arguments]    ${nome}    ${cpf}    ${data}
-    Input Text     id=nome                ${nome}
-    Input Text     id=cpf                 ${cpf}
-    Input Text     id=data-nascimento     ${data}
+    [Arguments]    ${nomeCompleto}    ${data}    ${cpf}    ${convenio}
+    Input Text     id=nomePaciente                ${nomeCompleto}
+    Sleep    1s
+    Input Text     id=dataNascimentoPaciente     ${data}
+    Sleep    1s
+    Input Text     id=cpfCadastro                 ${cpf}
+    Sleep    2s
+    Input Text     id=convenio            ${convenio}
+
+Preencher Dados do Paciente Edicao
+    [Arguments]    ${convenio}
+    Input Text     id=convenioEdicao    ${convenio}
+    Sleep    2s
+
+Preencher Dados de busca
+    [Arguments]    ${termo}
+    Input Text     id=nomeBusca    ${termo}
+    Sleep    2s
 
 Submeter Cadastro de Paciente
     Click Button    id=salvar
 
-Verificar Cadastro com Sucesso
-    Wait Until Page Contains    Paciente cadastrado com sucesso
+Submeter Edicao de Paciente
+    Click Button    id=salvar-edicao
+
+Submeter Busca de Paciente
+    Click Button    id=buscar-paciente
+
+Varificar se Paciente foi Criado
+    Wait Until Page Contains    Paciente criado!
+
+Varificar se Paciente foi Editado
+    Wait Until Page Contains    Paciente editado!
+
+Varificar se Paciente foi buscado
+    Wait Until Page Contains    João
 
 Acessar Lista de Pacientes
     Open Browser    http://localhost:4200/pacientes    chrome
