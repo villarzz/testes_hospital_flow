@@ -8,17 +8,16 @@ Este repositório contém os testes automatizados desenvolvidos com **Robot Fram
 ```
 📂 testes_hospital_flow
 ├── 📂 tests
-│   ├── login_tests.robot
-│   ├── internacoes_tests.robot
-│   └── ...
+│   ├── login.robot
+│   ├── internacoes.robot
+│   ├── pacientes.robot
+|   └── ralatorios.robot
 ├── 📂 resources
-│   ├── keywords.robot
-│   ├── variables.robot
-│   └── ...
-├── 📂 results
-│   └── (relatórios gerados)
-├── README.md
-└── requirements.txt
+│   ├── internacoes_resources.robot
+│   ├── login_resources.robot
+│   ├── pacientes_resources.robot
+│   └── relatorios_resources.robot
+└── README.md
 ```
 
 ## 🧪 Funcionalidades Testadas
